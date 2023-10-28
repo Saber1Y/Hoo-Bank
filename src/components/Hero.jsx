@@ -15,10 +15,10 @@ const Hero = () => (
           px-4 bg-discount-gradient rounded-[10px] mb-2">
               <img src={discount} alt="discount" className='w-[32px] h-[32px]'/>
             <p className={`${style.paragraph} ml-2`}>
-          <span className='text-white'>20$</span>
+          <span className='text-white'>20$ {''}</span>
              DISCOUNT FOR {''}
-          <span className='text-white'>1 MONTH</span>
-             ACCOUNT 
+          <span className='text-white'>1 MONTH {''}</span>
+             ACCOUNT
             </p>
         </div>
 
@@ -27,14 +27,25 @@ const Hero = () => (
              ss:text-[73px] text-[52px] text-white ss:leading-[100px] leading-[75px]'>
               The Next <br className='sm:block hiddens'/> {' '}
               <span className='text-gradient'>Generation </span>
-               Payment Round
             </h1>
 
             <div className='ss:flex hidden md:mr-4 mr-0'>
               <GetStarted />
             </div>
-
           </div>
+
+        <h1 className='flex-1 font-poppins font-semibold
+          ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full'>
+              Payment Method
+          </h1>
+        <p className={`${style.paragraph} max-w-[420px] mt-5`}>
+          Our team of experts uses a methodology to identify the credit cards most likely to fit your needs. 
+          We examine annual percentage rates, annual fees.
+        </p>
+        </div>
+
+        <div>
+          <img src={robot} alt="" />
         </div>
       </section>
     </>
