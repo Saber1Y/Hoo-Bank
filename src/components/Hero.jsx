@@ -7,7 +7,7 @@ import GetStarted from './GetStarted'
 const Hero = () => (
     <>
      <section id='home' 
-       className={`flex md:flex-row flex-col ${style.paddingY}`}>
+       className={`flex md:flex-row flex-col w-full ${style.paddingY}`}>
         <div className={`flex-1 ${style.flexStart}
          flex-col xl:px-0 sm:px-16 px-6`}>
 
@@ -29,9 +29,9 @@ const Hero = () => (
               <span className='text-gradient'>Generation </span>
             </h1>
 
-            <div className='ss:flex hidden md:mr-4 mr-0'>
+            {/* <div className='ss:flex hidden md:mr-4 mr-0'>
               <GetStarted />
-            </div>
+            </div> */}
           </div>
 
         <h1 className='flex-1 font-poppins font-semibold
@@ -44,16 +44,20 @@ const Hero = () => (
         </p>
         </div>
 
-        <div>
+      <div>
           <img src={robot} alt="robot"
           className='w-[100%] z-[5] relative'/>
 
-          <div className='absolute w-[30%] h-[40%] z-[0] top-0 pink__gradient'>
+          {/* <div className='absolute w-[30%] h-[40%] z-[0] top-0 pink__gradient'>
           </div>
           <div className='absolute w-[80%] h-[80%] z-[1] top-0 white__gradient rounded-full bottom-40'>
           </div>
           <div className='absolute w-[50%] h-[50%] z-[0] right-20 bottom-20 blue__gradient'>
-          </div>
+          </div> */}
+      </div>
+
+        <div className={`ss:hidden ${style.flexStart}`}>
+          <GetStarted />
         </div>
       </section>
     </>
