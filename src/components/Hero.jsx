@@ -29,9 +29,9 @@ const Hero = () => (
               <span className='text-gradient'>Generation </span>
             </h1>
 
-            {/* <div className='ss:flex hidden md:mr-4 mr-0'>
+            <div className='ss:flex hidden md:mr-4 mr-0'>
               <GetStarted />
-            </div> */}
+            </div>
           </div>
 
         <h1 className='flex-1 font-poppins font-semibold
