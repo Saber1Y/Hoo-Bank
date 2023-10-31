@@ -17,11 +17,11 @@ const Footer = () =>(
               <h4 className='font-poppins font-medium text-white text-[18px] leading-[27px]'>
                 {footerlink.title}
               </h4>
-                <ul>
+                <ul className='list-none mt-4'>
                   {footerlink.links.map((link, index) => (
                     <li key={link.name} 
                     className={`font-poppins font-normal text-[16px] text-dimWhite hover:text-secondary 
-                    cursor-pointer`}>
+                    cursor-pointer ${index !== footerlink.links.length -1 ? 'mb-4' : 'mb-0'} `}>
                         {link.name}
                     </li>
                   ))}
