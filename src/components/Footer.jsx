@@ -39,7 +39,9 @@ const Footer = () =>(
         <div className='flex flex-row md:mt-0 mt-6'>
           {socialMedia.map((media, index) => (
             <div key={media.id}>
-              <img src="{media.icon}" alt="{media.id}" className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length -1 ? 'mr-6' : 'mr-0'}`}/>
+              <img src="{media.icon}" alt="{media.id}" 
+              className={`w-[21px] h-[21px] object-contain cursor-pointer ${index !== socialMedia.length -1 ? 'mr-6' : 'mr-0'} `}
+              />
             </div>
           ))}
         </div>

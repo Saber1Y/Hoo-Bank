@@ -8,6 +8,19 @@ const NavBar = () => {
     
   const [toggle, setToggle] = useState(false);
 
+  const hoveredText = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const Hovered = () => {
+      setIsHovered(!isHovered);
+    }
+
+    const Styled = {
+      position: 'relative',
+      top: isHovered ? '-5px' : '0',
+      transition: 'top 0.3s ease-in-out',
+    }
+  }
   return (
   <nav className='w-full flex py-6 justify-between items-center navbar'>
     <img src={logo} alt="logo"  className='w-{124px} h-{32px}' />

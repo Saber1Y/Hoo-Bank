@@ -1,9 +1,11 @@
 import React from 'react';
 import style from './style';
 import { NavBar, Hero, Stats, Business, Billing, Carddeal, Testimonals, Clients, CTA, Footer } from './components/imports';
+
+
 const App = () => {
   return (
-<div className="bg-primary w-full overflow-hidden">
+   <div className="bg-primary w-full overflow-hidden">
       <div className={`${style.paddingX} ${style.flexCenter}`}>
       <div className={`${style.boxWidth}`}>
         <NavBar />
@@ -34,4 +36,3 @@ const App = () => {
 }
 
 export default App
-
