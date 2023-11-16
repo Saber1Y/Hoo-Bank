@@ -21,21 +21,27 @@ const NavBar = () => {
       transition: 'top 0.3s ease-in-out',
     }
   }
-  return (
-  <nav className='w-full flex py-6 justify-between items-center navbar'>
-    <img src={logo} alt="logo"  className='w-{124px} h-{32px}' />
 
-    <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-      {navLinks.map((nav, index) => (
-     <li key={nav.id} 
-     className={`font-poppins hover:text-secondary font-normal cursor-pointer text-{16px}
-     ${index === navLinks.length -1 ? 'mr-1' : 'mr-10' } text-white mr-10`}>
-      <a href={`#${nav.id}`}>
-        {nav.title}
-      </a>
-     </li>
-      ))}
-    </ul>
+  return (
+
+    
+<nav className='w-full flex py-6 justify-between items-center navbar'>
+  <img src={logo} alt="logo" className='w-124 h-32' />
+
+  <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+    {navLinks.map((nav, index) => (
+      <li
+        key={nav.id}
+        className={`font-poppins hover:text-secondary font-normal cursor-pointer text-16 ${
+          index === navLinks.length - 1 ? 'mr-1' : 'mr-10'
+        } text-white mr-10 hover:transition-all`}
+      >
+        <a href={`#${nav.id}`}>{nav.title}</a>
+      </li>
+    ))}
+  </ul>
+
+
 
 
     <div className="sm:hidden flex-1 items-center justify-end flex ">
