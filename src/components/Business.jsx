@@ -4,6 +4,7 @@ import Button from './Button'
 import { features } from '../constants'
 
 
+
 const FeatureCard = ({ index, content, title, icon }) => (
   <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
@@ -31,11 +32,11 @@ const Business = () => (
                earning rewards and saving money. But with hundreds of credit cards on the market.
                </p>
 
-               <Button styles='mt-10' />
+               <Button styles='mt-10 rounded-lg '/>
         </div>
 
         <div className={`${layout.sectionImg} flex-col`}>
-          {features.map((feature, index) => (
+          {features.map((feature) => (
               <FeatureCard key={feature.id} {...feature} />
           ))}
         </div>

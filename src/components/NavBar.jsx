@@ -4,6 +4,7 @@ import { navLinks } from '../constants'
 import { useState } from 'react'
 
 
+
 const NavBar = () => {
     
   const [toggle, setToggle] = useState(false);
@@ -15,31 +16,33 @@ const NavBar = () => {
       setIsHovered(!isHovered);
     }
 
-    const Styled = {
-      position: 'relative',
-      top: isHovered ? '-5px' : '0',
-      transition: 'top 0.3s ease-in-out',
-    }
+    const hoverEffectStyle = {
+      ':hover': {
+        transform: 'scale(1.1)',
+        transition: 'transform 0.3s ease',
+      },
+    };
   }
 
   return (
 
     
-<nav className='w-full flex py-6 justify-between items-center navbar'>
-  <img src={logo} alt="logo" className='w-124 h-32' />
+<nav className='w-full flex py-2 justify-between items-center navbar'>
+  <img src={logo} alt="logo" className='w-110 h-32' />
 
-  <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-    {navLinks.map((nav, index) => (
-      <li
-        key={nav.id}
-        className={`font-poppins hover:text-secondary font-normal cursor-pointer text-16 ${
-          index === navLinks.length - 1 ? 'mr-1' : 'mr-10'
-        } text-white mr-10 hover:transition-all`}
-      >
-        <a href={`#${nav.id}`}>{nav.title}</a>
-      </li>
-    ))}
-  </ul>
+  <ul className="list-none sm:flex hidden justify-end items-center flex-1 hover-effect">
+  {navLinks.map((nav, index) => (
+    <li
+      key={nav.id}
+      className={`font-poppins hover:text-secondary font-normal cursor-pointer text-16 ${
+        index === navLinks.length - 1 ? 'mr-1' : 'mr-10'
+      } text-white mr-10 transition-all`}
+    >
+      <a href={`#${nav.id}`}>{nav.title}</a>
+    </li>
+  ))}
+</ul>
+s
 
 
 
