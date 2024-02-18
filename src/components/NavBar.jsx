@@ -2,6 +2,7 @@ import React from 'react'
 import { close, logo, menu } from '../assets'
 import { navLinks } from '../constants'
 import { useState } from 'react'
+// import { Fade } from "react-swift-reveal";
 
 
 
@@ -9,26 +10,27 @@ const NavBar = () => {
     
   const [toggle, setToggle] = useState(false);
 
-  const hoveredText = () => {
-    const [isHovered, setIsHovered] = useState(false);
+  // const hoveredText = () => {
+  //   const [isHovered, setIsHovered] = useState(false);
 
-    const Hovered = () => {
-      setIsHovered(!isHovered);
-    }
+  //   const Hovered = () => {
+  //     setIsHovered(!isHovered);
+  //   }
 
-    const hoverEffectStyle = {
-      ':hover': {
-        transform: 'scale(1.1)',
-        transition: 'transform 0.3s ease',
-      },
-    };
-  }
+  //   const hoverEffectStyle = {
+  //     ':hover': {
+  //       transform: 'scale(1.1)',
+  //       transition: 'transform 0.3s ease',
+  //     },
+  //   };
+  // }
 
   return (
 
     
 <nav className='w-full flex py-2 justify-between items-center navbar'>
-  <img src={logo} alt="logo" className='w-110 h-32' />
+  <img src={logo} alt="logo" className=' w-96 h-32' />
+  
 
   <ul className="list-none sm:flex hidden justify-end items-center flex-1 hover-effect">
   {navLinks.map((nav, index) => (
@@ -41,9 +43,7 @@ const NavBar = () => {
       <a href={`#${nav.id}`}>{nav.title}</a>
     </li>
   ))}
-</ul>
-s
-
+ </ul>
 
 
 
