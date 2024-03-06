@@ -4,7 +4,7 @@ import { navLinks } from "../constants";
 import { useState } from "react";
 import { SignForm } from "./imports";
 import { Link, Routes } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
