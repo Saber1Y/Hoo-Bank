@@ -9,6 +9,7 @@ import Footer from './Footer';
 import Testimonals from './Testimonals';
 import Hero from './Hero';
 import GetStarted from './GetStarted';
+import SignForm from './SignForm';
 
 export {
     NavBar,
@@ -22,4 +23,5 @@ export {
     Testimonals,
     Hero,
     GetStarted,
+    SignForm
 }
