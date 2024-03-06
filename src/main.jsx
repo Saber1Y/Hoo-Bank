@@ -5,17 +5,21 @@ import App from "./App.jsx";
 import "./index.css";
 import SignForm from "./components/SignForm.jsx";
 import EroorForm from "./components/EroorForm.jsx";
-
+import LoginForm from "./components/LoginForm.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <EroorForm />
+    errorElement: <EroorForm />,
   },
   {
     path: "/SignForm",
     element: <SignForm />,
+  },
+  {
+    path: "/LoginForm",
+    element: <LoginForm />,
   },
 ]);
 

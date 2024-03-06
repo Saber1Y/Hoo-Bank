@@ -6,7 +6,7 @@ const EroorForm = () => {
   return (
     <div>
       404 Not Found
-      <Link to="/App">
+      <Link to="/">
         Go back Home
       </Link>
     </div>
