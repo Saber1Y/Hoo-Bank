@@ -53,8 +53,8 @@ def register():
             hashed_password=hashed_password,
             new_filename=new_filename,
         )
-        return render_template("login.html")
+        return render_template("LoginForm.jsx")
 
     else:
-        return render_template("register.html")
+        return render_template("SignForm.jsx")
     
