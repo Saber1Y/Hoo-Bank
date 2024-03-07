@@ -34,52 +34,22 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-        # Check if textbox is blank
-        if not request.form.get("username"):
-            return apology("must provide username", 400)
-        # Check if password box is blank
-        if not request.form.get("password"):
-            return apology("must provide password", 400)
-        # Check if password is cross-checked
-        if not request.form.get("confirmation"):
-            return apology("must retype password", 400)
-        # Check if passwords match
-        if not request.form.get("confirmation") == request.form.get("password"):
-            return apology("passwords do not match", 400)
-
-        # Declare a list of existing usernames
+        # Declare a list of existing emails
         rows = cur.execute(
-            "SELECT * FROM users WHERE username = :username",
-            username=request.form.get("username"),
+            "SELECT * FROM users WHERE email = :email",
+            email=request.form.get("email"),
         )
         if len(rows) > 0:
-            return apology("username is already taken!")
+            return apology("email is already taken!")
 
-        # Create username and password variables
-        username = request.form.get("username")
+        # Create email and password variables
+        email = request.form.get("email")
         hashed_password = generate_password_hash(request.form.get("password"))
-
-        # Check if image is uploaded
-        #if request.files.get("profile_photo"):
-        #    # Check image validity
-        #    if imghdr.what(request.files.get("profile_photo")) is not None:
-        #        # handle the image upload
-        #        file = request.files["profile_photo"]
-        #        # Fetching original filename
-        #        original_filename = secure_filename(file.filename)
-        #        file_data = file.read()
-#
-        #        new_filename = generate_filename(username, original_filename)
-#
-        #        with open(f"static/profilePhoto/{new_filename}", "wb") as f:
-        #            f.write(file_data)
-        #    else:
-        #        return apology("Upload an image file", 415)
 
         # Insert new registrant into database
         cur.execute(
-            "INSERT INTO users (username, hash, profilePhoto) VALUES(:username, :hashed_password, :new_filename)",
-            username=username,
+            "INSERT INTO users (email, hash, profilePhoto) VALUES(:email, :hashed_password, :new_filename)",
+            email=email,
             hashed_password=hashed_password,
             new_filename=new_filename,
         )
@@ -87,3 +57,4 @@ def register():
 
     else:
         return render_template("register.html")
+    
