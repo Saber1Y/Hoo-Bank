@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import SignForm from "./components/SignForm.jsx";
+import Register from "./components/Register.jsx";
 import EroorForm from "./components/EroorForm.jsx";
 import LoginForm from "./components/LoginForm.jsx";
 
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
     errorElement: <EroorForm />,
   },
   {
-    path: "/SignForm",
-    element: <SignForm />,
+    path: "/Register",
+    element: <Register />,
   },
   {
     path: "/LoginForm",
