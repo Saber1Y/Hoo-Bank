@@ -4,7 +4,7 @@ import { logo } from "../assets";
 
 const Register = () => {
   return (
-    <section className="bg-primary">
+    <section className="bg-primary h-screen">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <Link
           to="/"
@@ -19,7 +19,12 @@ const Register = () => {
               Create an account
             </h1>
             {/* Add register route*/}
-            <form className="space-y-4 md:space-y-6" action="/register" method="post" enctype="multipart/form-data">
+            <form
+              className="space-y-4 md:space-y-6"
+              action="/register"
+              method="post"
+              enctype="multipart/form-data"
+            >
               <div>
                 <label
                   htmlFor="email"

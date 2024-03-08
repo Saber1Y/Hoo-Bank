@@ -110,7 +110,7 @@ const NavBar = () => {
               clipRule="evenodd"
             />
           </svg>
-          <Link to="/Register">Sign in</Link>
+          <Link to="/Register">Register</Link>
         </button>
         <button
           type="button"
