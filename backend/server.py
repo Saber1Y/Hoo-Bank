@@ -1,7 +1,6 @@
 # Initializing database connection
 import sqlite3
 con = sqlite3.connect("transactions.db")
-
 # Database cursor to execute SQL statements and queries
 cur = con.cursor()
 
