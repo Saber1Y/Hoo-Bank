@@ -1,7 +1,6 @@
 # Initializing database connection
 import sqlite3
 con = sqlite3.connect("transactions.db")
-
 # Database cursor to execute SQL statements and queries
 cur = con.cursor()
 
@@ -29,6 +28,7 @@ Session(app)
 # Registration route
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    
     """Register user"""
     new_filename = "profilePhoto/profilePhoto.svg"
 
