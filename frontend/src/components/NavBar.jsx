@@ -10,9 +10,9 @@ const NavBar = () => {
 
   return (
     <nav className="w-full flex py-2 justify-between items-center navbar">
-      <img src={logo} alt="logo" className="w-80 h-32" />
+      <img src={logo} alt="logo" className="w-25 h-25 md:w-70 md:h-10" />
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1 hover-effect">
+      <ul className="list-none sm:flex hidden  items-center hover-effect">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -92,7 +92,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden  sm:flex sm:flex-col md:flex">
         <button
           type="button"
           className="text-dark bg-[#a8eff2] hover:bg-[#a8eff2]/90  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#a8eff2]/55 me-2 mb-2"
