@@ -39,9 +39,9 @@ def register():
             "SELECT * FROM users WHERE email = :email",
             email=request.form.get("email"),
         )
-        if len(rows) > 0:
-            return apology("email is already taken!")
-
+        #if len(rows) > 0:
+        #    return apology("email is already taken!")
+#
         # Create email and password variables
         email = request.form.get("email")
         hashed_password = generate_password_hash(request.form.get("password"))
