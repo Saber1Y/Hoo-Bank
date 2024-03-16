@@ -2,9 +2,7 @@ import React from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import { useState } from "react";
-import { SignForm } from "./imports";
 import { Link, Routes } from "react-router-dom";
-
 
 const NavBar = () => {
   const [toggle, setToggle] = useState(false);
