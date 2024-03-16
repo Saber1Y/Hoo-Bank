@@ -2,6 +2,7 @@ import React from "react";
 import { close, logo, menu } from "../assets";
 import { navLinks } from "../constants";
 import { useState } from "react";
+import { Register } from "../components/imports";
 import { Link, Routes } from "react-router-dom";
 
 const NavBar = () => {
@@ -69,7 +70,7 @@ const NavBar = () => {
             clip-rule="evenodd"
           />
         </svg>
-        <Link to="/SignForm">Sign in</Link>
+        <Link to="/Register">Sign in</Link>
       </button>
       <button
         type="button"
