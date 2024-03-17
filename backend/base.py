@@ -6,7 +6,7 @@ cur = con.cursor()
 
 
 from flask import Flask, redirect, render_template, request, session
-from flask_session import Session
+#from flask_session import Session
 import imghdr
 from werkzeug.security import check_password_hash, generate_password_hash
 from werkzeug.utils import secure_filename
@@ -22,7 +22,7 @@ app.jinja_env.filters["ngn"] = ngn
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
-Session(app)
+#Session(app)
 
 
 # Registration route
@@ -39,9 +39,9 @@ def register():
             "SELECT * FROM users WHERE email = :email",
             email=request.form.get("email"),
         )
-        if len(rows) > 0:
-            return apology("email is already taken!")
-
+        #if len(rows) > 0:
+        #    return apology("email is already taken!")
+#
         # Create email and password variables
         email = request.form.get("email")
         hashed_password = generate_password_hash(request.form.get("password"))

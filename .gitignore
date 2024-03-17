@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Added by AnuOluwatomiwa
+backend/env
+backend/__pycache__
+node_modules/
