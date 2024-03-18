@@ -20,11 +20,11 @@ const Billing = () => {
           ipsum orci rhoncus aliporttitor integer 
           platea placerat.
           </p>
-          <div className='flex flex-row flex-wrap sm:mt-10 mt-6'>
+          {/* <div className='flex flex-row flex-wrap sm:mt-10 mt-6'>
             <img src={apple} alt="apple" className='w-[120px] h-[42px] object-contain mr-5 cursor-pointer'/>
             <img src={google} alt="google" className='w-[120px] h-[42px] object-contain  cursor-pointer'/>
 
-          </div>
+          </div> */}
       </div>
     </section>
   )

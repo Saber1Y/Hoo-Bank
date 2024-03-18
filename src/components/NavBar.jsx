@@ -66,7 +66,7 @@ const NavBar = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <Link to="/Register">Sign in</Link>
+              <Link to="/Register">Register</Link>
             </button>
 
             <button
@@ -92,7 +92,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="hidden  sm:flex sm:flex-col md:flex">
+      <div className="hidden  sm:flex sm:flex-col md:flex lg:flex-row">
         <button
           type="button"
           className="text-dark bg-[#a8eff2] hover:bg-[#a8eff2]/90  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#a8eff2]/55 me-2 mb-2"
