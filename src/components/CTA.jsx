@@ -14,9 +14,10 @@ const CTA = () => (
       </p>
     </div>
 
-    {/* <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
+    <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
       <Button styles="rounded-lg" />
-    </div> */}
+    </div>
+
   </section>
 );
 
