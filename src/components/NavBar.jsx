@@ -131,6 +131,9 @@ const NavBar = () => {
           </svg>
           <Link to="/LoginForm">Login</Link>
         </button>
+        <button className="bg-white">
+          <Link to="./Dashboard">Dashboard</Link>
+        </button>
       </div>
     </nav>
   );

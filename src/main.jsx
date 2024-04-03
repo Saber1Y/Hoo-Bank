@@ -6,6 +6,7 @@ import "./index.css";
 import Register from "./components/Register.jsx";
 import EroorForm from "./components/EroorForm.jsx";
 import LoginForm from "./components/LoginForm.jsx";
+import Dashboard from "./components/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/LoginForm",
     element: <LoginForm />,
+  },
+  {
+    path: "/Dashboard",
+    element: <Dashboard />,
   },
 ]);
 
