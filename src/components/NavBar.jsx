@@ -132,7 +132,7 @@ const NavBar = () => {
           <Link to="/LoginForm">Login</Link>
         </button>
         <button className="bg-white">
-          <Link to="./Dashboard">Dashboard</Link>
+          <Link to="./Dash">Dashboard</Link>
         </button>
       </div>
     </nav>
