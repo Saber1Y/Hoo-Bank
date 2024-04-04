@@ -14,6 +14,8 @@ const Dash = () => {
     setVisible2(!visible2);
   };
 
+  const userProfile = "Sporty";
+
   return (
     <section className="bg-primary h-screen">
       <div className="flex p-3 items-center justify-between">
@@ -36,7 +38,25 @@ const Dash = () => {
           </button>
         </div>
 
-        <div className="">UserProfile</div>
+        <div className="relative">
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-20 h-20 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+              <svg
+                className="absolute w-12 h-12 text-gray-400 left-5 top-3"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <p className="mt-1 text-white font-poppins text-xl">{`Hii ${userProfile} `}</p>
+          </div>
+        </div>
       </div>
 
       <div className="flex justify-center m-4 my-10 space-x-3">
