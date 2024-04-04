@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { logo } from "../assets";
-import { IoEyeOff } from "react-icons/io5";
+import { IoEyeOff, IoEye } from "react-icons/io5";
 
 const Dash = () => {
+  const [visible, setVisible] = useState(true);
+
+  const toggleVisibility = () => {
+    setVisible(!visible);
+  };
+
   return (
     <section className="bg-primary">
       <div className="flex p-3 items-center justify-between mt-16">
@@ -28,19 +34,29 @@ const Dash = () => {
         <div className="">UserProfile</div>
       </div>
 
-      <div className="flex justify-center m-4 my-10 space-x-8">
+      <div className="flex justify-center m-4 my-10 space-x-3">
         <div className="bg-white border p-10 rounded-lg">
-          <span>Available Balance</span>
-          <hr className="mt-2" />
+          <span className="bg-primary text-white">Available Balance</span>
+          <hr className="mt-2 border" />
 
-          <p>Available Balance</p>
+          <div className="flex justify-between items-center">
+            <span onClick={toggleVisibility}>
+              {visible ? <IoEyeOff /> : <IoEye />}
+            </span>
+            <p>{visible ? <span>1000</span> : "****"}</p>
+          </div>
         </div>
 
         <div className="bg-white border p-10 rounded-lg">
-          <span>Spent Today</span>
-          <hr  className="mt-2" />
+          <span className="bg-primary text-white">Available Balance</span>
+          <hr className="mt-2 border" />
 
-          <p>Available Balance</p>
+          <div className="flex justify-between items-center">
+            <span onClick={toggleVisibility}>
+              {visible ? <IoEyeOff /> : <IoEye />}
+            </span>
+            <p>{visible ? <span>1000</span> : "****"}</p>
+          </div>
         </div>
       </div>
     </section>
