@@ -4,14 +4,19 @@ import { IoEyeOff, IoEye } from "react-icons/io5";
 
 const Dash = () => {
   const [visible, setVisible] = useState(true);
+  const [visible2, setVisible2] = useState(true);
 
   const toggleVisibility = () => {
     setVisible(!visible);
   };
 
+  const toggleVisibility2 = () => {
+    setVisible2(!visible2);
+  };
+
   return (
-    <section className="bg-primary">
-      <div className="flex p-3 items-center justify-between mt-16">
+    <section className="bg-primary h-screen">
+      <div className="flex p-3 items-center justify-between">
         <div className="">
           <img src={logo} alt="" className="" />
         </div>
@@ -36,26 +41,50 @@ const Dash = () => {
 
       <div className="flex justify-center m-4 my-10 space-x-3">
         <div className="bg-white border p-10 rounded-lg">
-          <span className="bg-primary text-white">Available Balance</span>
+          <span className=" text-black text-3xl font-poppins">
+            Available Balance
+          </span>
           <hr className="mt-2 border" />
 
           <div className="flex justify-between items-center">
             <span onClick={toggleVisibility}>
-              {visible ? <IoEyeOff /> : <IoEye />}
+              {visible ? (
+                <IoEyeOff className="text-2xl" />
+              ) : (
+                <IoEye className="text-2xl" />
+              )}
             </span>
-            <p>{visible ? <span>1000</span> : "****"}</p>
+            <p>
+              {visible ? (
+                <span className="font-poppins text-2xl">1000</span>
+              ) : (
+                <span className="text-3xl">*****</span>
+              )}
+            </p>
           </div>
         </div>
 
         <div className="bg-white border p-10 rounded-lg">
-          <span className="bg-primary text-white">Available Balance</span>
+          <span className=" text-black text-3xl font-poppins">
+            Available Balance
+          </span>
           <hr className="mt-2 border" />
 
           <div className="flex justify-between items-center">
-            <span onClick={toggleVisibility}>
-              {visible ? <IoEyeOff /> : <IoEye />}
+            <span onClick={toggleVisibility2}>
+              {visible2 ? (
+                <IoEyeOff className="text-2xl" />
+              ) : (
+                <IoEye className="text-2xl" />
+              )}
             </span>
-            <p>{visible ? <span>1000</span> : "****"}</p>
+            <p>
+              {visible2 ? (
+                <span className="font-poppins text-2xl">1000</span>
+              ) : (
+                <span className="text-3xl">*****</span>
+              )}
+            </p>
           </div>
         </div>
       </div>
