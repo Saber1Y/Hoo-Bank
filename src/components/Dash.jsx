@@ -1,5 +1,6 @@
 import React from "react";
 import { logo } from "../assets";
+import { IoEyeOff } from "react-icons/io5";
 
 const Dash = () => {
   return (
@@ -29,13 +30,15 @@ const Dash = () => {
 
       <div className="flex justify-center m-4 my-10 space-x-8">
         <div className="bg-white border p-10 rounded-lg">
-          <span></span>
+          <span>Available Balance</span>
+          <hr className="mt-2" />
 
           <p>Available Balance</p>
         </div>
 
         <div className="bg-white border p-10 rounded-lg">
-          <span></span>
+          <span>Spent Today</span>
+          <hr  className="mt-2" />
 
           <p>Available Balance</p>
         </div>
