@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+
 dist
 dist-ssr
 *.local
@@ -26,3 +26,6 @@ dist-ssr
 # Added by AnuOluwatomiwa
 backend/env
 backend/__pycache__
+# Added node_modules directory
+node_modules/
+.env
