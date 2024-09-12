@@ -6,22 +6,34 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage('');  // Reset the error message
+
     // Add your validation logic here
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
 
-    await fetch('http://localhost:5000/register', {
+    const response = await fetch('http://localhost:5000/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email, password }),
     });
+
+    const data = await response.json();
+
+    if (response.status === 400) {
+      setErrorMessage(data.message);
+    } else {
+      alert("Registration successful!");
+      // Optionally redirect to another page
+    }
   };
 
   return (
@@ -39,10 +51,7 @@ const Register = () => {
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Create an account
             </h1>
-            <form
-              className="space-y-4 md:space-y-6"
-              onSubmit={handleSubmit}
-            >
+            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="email"
@@ -94,6 +103,10 @@ const Register = () => {
                   required
                 />
               </div>
+
+              {errorMessage && (
+                <div className="text-red-500 text-sm">{errorMessage}</div>
+              )}
 
               <button
                 type="submit"
