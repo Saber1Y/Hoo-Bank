@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { logo } from "../assets";
 
 const Register = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage('');  // Reset the error message
+    setErrorMessage(""); // Reset the error message
 
     // Add your validation logic here
     if (password !== confirmPassword) {
@@ -18,10 +18,10 @@ const Register = () => {
       return;
     }
 
-    const response = await fetch('http://localhost:5000/register', {
-      method: 'POST',
+    const response = await fetch("http://localhost:5000/register", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({ email, password }),
     });
